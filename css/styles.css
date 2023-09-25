@@ -1,0 +1,84 @@
+/* Grid */
+#grid .row {
+  display: flex; /* Creating a flex container to align child elements (columns) in a row */
+}
+
+#grid .col {
+  flex: 1; /* Allocating equal space to each column in a row */
+  border: 1px solid black; /* Adding border to each column for clear distinction */
+  text-align: center; /* Center-aligning the text within the column */
+  padding: 10px; /* Providing spacing inside each column for better readability */
+}
+
+/* Applying different box models to each row to showcase variations in border, margin, and padding */
+.row:nth-child(1) .col {
+  border-width: 2px;
+  margin: 5px;
+  padding: 10px;
+}
+
+.row:nth-child(2) .col {
+  border-width: 5px;
+  margin: 10px;
+  padding: 15px;
+}
+
+.row:nth-child(3) .col {
+  border-width: 8px;
+  margin: 15px;
+  padding: 20px;
+}
+
+/* Styling for an itemized list */
+ul {
+  list-style-type: none; /* Removing the default bullets from the list */
+}
+
+/* Positioning the divs inside the positioning container */
+#positioning {
+  position: relative; /* Establishing a positioning context for absolute positioning of child divs */
+}
+
+#positioning div {
+  position: absolute; /* Allowing each div to be positioned relative to the #positioning container */
+}
+
+/* Specifying the positions for each of the divs */
+#positioning .position1 {
+  top: 0;
+  left: 0;
+}
+
+#positioning .position2 {
+  top: 0;
+  right: 0;
+}
+
+#positioning .position3 {
+  bottom: 0;
+  left: 0;
+}
+
+#positioning .position4 {
+  bottom: 0;
+  right: 0;
+}
+
+/* Flexbox layout for nested divs inside #grid */
+#grid div div {
+  display: flex;
+}
+#grid div div span {
+  flex: 1;
+  text-align: center;
+  border: 1px solid black;
+  padding: 10px;
+}
+
+/* Footer styling */
+footer {
+  position: fixed; /* Fixing the footer to the bottom of the viewport */
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+}
